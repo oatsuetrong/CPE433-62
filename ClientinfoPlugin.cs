@@ -7,27 +7,28 @@ namespace DNWS
 {
   class ClientinfoPlugin : IPlugin
   {
-    protected static Dictionary<String, int> clientinfoDictionary = null;
+    // protected static Dictionary<String, int> clientinfoDictionary = null;
     public ClientinfoPlugin()
     {
-      if (clientinfoDictionary == null)
-      {
-        clientinfoDictionary = new Dictionary<String, int>();
-
-      }
+      // if (clientinfoDictionary == null)
+      // {
+      //   clientinfoDictionary = new Dictionary<String, int>();
+      // }
     }
 
     public void PreProcessing(HTTPRequest request)
     {
-      if (clientinfoDictionary.ContainsKey(request.Url))
-      {
-        clientinfoDictionary[request.Url] = (int)clientinfoDictionary[request.Url] + 1;
-      }
-      else
-      {
-        clientinfoDictionary[request.Url] = 1;
-      }
+      // if (clientinfoDictionary.ContainsKey(request.Url))
+      // {
+      //   clientinfoDictionary[request.Url] = (int)clientinfoDictionary[request.Url] + 1;
+      // }
+      // else
+      // {
+      //   clientinfoDictionary[request.Url] = 1;
+      // }
+      throw new NotImplementedException();
     }
+
     public HTTPResponse GetResponse(HTTPRequest request)
     {
       String[] ip = Regex.Split(request.getPropertyByKey("RemoteEndPoint"), ":");
