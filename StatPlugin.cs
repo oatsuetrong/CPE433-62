@@ -38,11 +38,6 @@ namespace DNWS
       {
         sb.Append(entry.Key + ": " + entry.Value.ToString() + "<br />");
       }
-      // sb.Append("Client IP: ").Append(ip[0]).Append("<br><br>");
-      // sb.Append("Client Port: ").Append(ip[1]).Append("<br><br>");
-      // sb.Append("Browser Information: ").Append(request.getPropertyByKey("User-Agent")).Append("<br><br>");
-      // sb.Append("Accept Language: ").Append(request.getPropertyByKey("Accept-Language")).Append("<br><br>");
-      // sb.Append("Accept Encoding: ").Append(request.getPropertyByKey("Accept-Encoding")).Append("<br><br>");
       sb.Append("</body></html>");
       response = new HTTPResponse(200);
       response.body = Encoding.UTF8.GetBytes(sb.ToString());
